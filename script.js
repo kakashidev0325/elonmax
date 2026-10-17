@@ -1,5 +1,5 @@
 const CONFIG = {
-  tokenAddress: "TBA",
+  tokenAddress: "32aND3HrjkDJYAaHVVHb2dW3S8cBnpJy5btMHvMJpump",
   pumpFunUrl: "",
   twitter: "https://x.com/elonmaxsol_x",
   telegram: "https://t.me/elonmax_tg",
@@ -18,7 +18,7 @@ function initContract() {
   const address = CONFIG.tokenAddress;
 
   if (!address) {
-    display.textContent = "TBA";
+    display.textContent = "32aND3HrjkDJYAaHVVHb2dW3S8cBnpJy5btMHvMJpump";
     copyBtn.disabled = true;
     copyBtn.title = "Contract address coming soon";
     return;
