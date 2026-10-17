@@ -1,8 +1,8 @@
 const CONFIG = {
-  tokenAddress: "9rzRfWAFzjkV7HMm36M1ZSh7JUf4S8pw6UeZdPdLpump",
+  tokenAddress: "",
   pumpFunUrl: "",
-  twitter: "https://x.com/trumponsol_x",
-  telegram: "",
+  twitter: "https://x.com/elonmaxsol_x",
+  telegram: "https://t.me/elonmax_tg",
 };
 
 function getPumpFunUrl() {
@@ -73,10 +73,17 @@ function initSocialLinks() {
 
   document.querySelectorAll("[data-telegram]").forEach((el) => {
     if (CONFIG.telegram) el.href = CONFIG.telegram;
+    else el.hidden = true;
   });
 
+  const hasTwitter = Boolean(CONFIG.twitter);
   document.querySelectorAll("[data-twitter]").forEach((el) => {
-    if (CONFIG.twitter) el.href = CONFIG.twitter;
+    if (hasTwitter) el.href = CONFIG.twitter;
+    else el.hidden = true;
+  });
+
+  document.querySelectorAll(".nav-socials").forEach((el) => {
+    if (!hasTwitter) el.hidden = true;
   });
 }
 
